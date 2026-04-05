@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  border: 4px solid red;
+}
+
+.grid-container {
+  width: 100%;
+  min-height: 100vh;
+  border: 2px solid blue;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  /* grid-template-rows: repeat(5, 1fr); */
+}
+
+.grid-boxes {
+  border: 1px solid black;
+  min-height: 100px;
+  border-radius: 20px;
+}
+
+.grid-boxes .images {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.grid-boxes:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/*Modal*/
+
+.modalContainer {
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  z-index: 1000;
+  display: none;
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modalImage {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: antiquewhite;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  transform: translateY(-45%);
+}
+
+.previousBtn {
+  top: 50%;
+  left: 20%;
+  position: absolute;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  transform: translateY(-45%);
+}
+
+
